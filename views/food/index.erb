@@ -1,0 +1,20 @@
+<div class="content">
+<h2>Foods</h2>
+  <ul>
+    <% @foods.each do |food|%>
+      <li>
+        <a href="/foods/<%= food.id %>/edit">
+          <%= food.name %>
+        </a>
+        <ul>
+          <li><%= food.description %></li>
+          <li>$<%= food.price %></li>
+          <li>Active: <%= food.active %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+    <br>
+    <br>
+    <a href="/foods/new"><button type="button" class="btn btn-primary">Add new</button></a><br />
+</div>
